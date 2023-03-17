@@ -5,7 +5,11 @@ from selenium.common.exceptions import NoSuchElementException
 
 class DemoQa(BasePage):
 
-    def test_exist_icon(self):
+    def __init__(self, driver):
+        self.base_url = 'https://demoqa.com/'
+        super().__init__(driver, self.base_url)
+
+    def test_icon_exist(self):
         try:
             self.find_element(locator='#app > header >a')
         except NoSuchElementException:
@@ -14,6 +18,16 @@ class DemoQa(BasePage):
 
     def click_on_the_icon(self):
         return self.find_element(locator='#app > header >a').click()
+
+    #def equal_url(self):
+        #if self.get_url == self.base_url:
+            #return True
+        #return False
+
+    def click_on_the_btn_elements(self):
+        return self.find_element(locator='#app > div > div > div.home-body > div > div:nth-child(1)').click
+
+
 
 
 
