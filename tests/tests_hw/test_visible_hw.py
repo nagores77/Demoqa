@@ -19,3 +19,8 @@ def test_visible_accordion_default(browser):
     demo_page = Accordion(browser)
     demo_page.visit()
 
+    assert not demo_page.section1.visible()
+    assert not demo_page.section2.visible()
+    assert not demo_page.section3.visible()
+
+
