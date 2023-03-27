@@ -15,11 +15,8 @@ class BasePage:
     def back(self):
         self.driver.back()
 
-
     def forward(self):
         self.driver.forward()
-
-
 
     def refresh (self):
         self.driver.refresh()
@@ -31,8 +28,7 @@ class BasePage:
     def get_url(self):
         return self.driver.current_url
 
-
-    def get_title(self):
+    def get_title(self):   # атрибут, который возвращает переменную (не метод)
         return self.driver.title
 
     def equal_url(self):
