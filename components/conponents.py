@@ -1,5 +1,6 @@
 from selenium.webdriver.common.by import By
 import time
+from selenium.common.exceptions import NoSuchElementException
 
 
 class WebElement:
@@ -14,5 +15,27 @@ class WebElement:
         time.sleep(3)
         return self.driver.find_element(By.CSS_SELECTOR, self.locator)
 
+    def exist(self):
+        try:
+            self.find_element()
+        except NoSuchElementException:
+            return False
+        return True
+
     def get_text(self):
         return str(self.find_element().text)
+
+    def test_icon_exist(self):
+        try:
+            self.find_element()
+        except NoSuchElementException:
+            return False
+        return True
+
+    def visible(self):
+        return self.find_element().is_displayed()
+
+
+
+
+

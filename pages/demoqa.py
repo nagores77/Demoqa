@@ -12,12 +12,12 @@ class DemoQa(BasePage):
         self.icon = WebElement(driver, '#app > header >a')
         self.btn_elements = WebElement(driver, '#app > div > div > div.home-body > div > div:nth-child(1)')
 
-    def test_icon_exist(self):
-        try:
-            self.icon.find_element()
-        except NoSuchElementException:
-            return False
-        return True
+
+    #def test_icon_exist(self):
+     #   try:
+      ## except NoSuchElementException:
+        #    return False
+        #return True
 
     # def click_on_the_icon(self):
     #     return self.find_element(locator='#app > header >a').click()

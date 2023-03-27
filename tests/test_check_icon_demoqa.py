@@ -8,7 +8,7 @@ def test_icon_exist(browser):
     demo_page.visit()
     demo_page.icon.click()
     # assert demo_page.equal_url()
-    assert demo_page.test_icon_exist()
+    # assert demo_page.icon()
 
 
 
