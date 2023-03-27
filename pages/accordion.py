@@ -8,4 +8,7 @@ class Accordion(BasePage):
         super().__init__(driver, self.base_url)
         self.text_block = WebElement(driver, '#section1Content > p ')
         self.heading = WebElement(driver, '#section1Heading')
+        self.section1 = WebElement(driver, '#section2Content > p:nth-child(1)')
+        self.section2 = WebElement(driver, '#section2Content > p:nth-child(2)')
+        self.section3 = WebElement(driver, '#section3Content > p')
 

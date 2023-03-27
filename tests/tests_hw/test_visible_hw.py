@@ -13,3 +13,9 @@ def test_visible_accordion(browser):
     time.sleep(2)
 
     assert not demo_page.text_block.visible()
+
+
+def test_visible_accordion_default(browser):
+    demo_page = Accordion(browser)
+    demo_page.visit()
+
