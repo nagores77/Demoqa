@@ -18,7 +18,7 @@ class BasePage:
     def forward(self):
         self.driver.forward()
 
-    def refresh (self):
+    def refresh(self):
         self.driver.refresh()
 
     # def find_element(self, locator):
