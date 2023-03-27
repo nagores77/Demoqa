@@ -9,7 +9,7 @@ def test_navigation(browser):
     demo_page.visit()
     demo_page.btn_elements.click()
 
-    demo_page.refresh()
+    browser.refresh()
     browser.refresh()
     browser.back()
     browser.forward()
