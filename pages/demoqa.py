@@ -1,7 +1,7 @@
 
 from pages.base_page import BasePage
 from selenium.common.exceptions import NoSuchElementException
-from components.conponents import WebElement
+from components.components import WebElement
 
 
 class DemoQa(BasePage):

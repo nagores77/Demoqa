@@ -1,6 +1,6 @@
 
 from pages.base_page import BasePage
-from components.conponents import WebElement
+from components.components import WebElement
 
 
 class ElementsPage(BasePage):
