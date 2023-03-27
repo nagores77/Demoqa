@@ -11,6 +11,10 @@ class FormPage(BasePage):
         super().__init__(driver, self.base_url)
         self.pageData = {'title': 'DEMOQA'}
         self.first_name = WebElement(driver, '#firstName')
+        self.last_name = WebElement(driver, '#lastName')
+        #self.e_mail = WebElement(driver, '#userEmail')
+        self.gender = WebElement(driver, '#gender-radio-2')
+        self.mobile = WebElement(driver, '#userNumber')
 
 
 
