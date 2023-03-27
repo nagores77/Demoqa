@@ -19,13 +19,10 @@ class WebElement:
         time.sleep(3)
         return self.driver.find_elements(By.CSS_SELECTOR, self.locator)
 
-    def check_count_elements(self, count: int):
+    def check_count_elements(self, count: int) -> bool:
         if len(self.find_elements()) == count:
             return True
         return False
-
-
-
 
     def exist(self):
         try:
