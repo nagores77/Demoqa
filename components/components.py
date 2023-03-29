@@ -55,6 +55,14 @@ class WebElement:
         self.find_element().send_keys(Keys.CONTROL + 'a')  # можно сделать так: self.send_keys(Keys.CONTROL + 'a')
         self.find_element().send_keys(Keys.DELETE)
 
+    def get_dom_attribute(self, name: str):
+        value = self.find_element().get_dom_attribute(name)
+
+        if value is None:
+            return False
+        if len(value) > 0:
+            return value
+        return True
 
 
 
