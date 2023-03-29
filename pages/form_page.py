@@ -12,9 +12,13 @@ class FormPage(BasePage):
         self.pageData = {'title': 'DEMOQA'}
         self.first_name = WebElement(driver, '#firstName')
         self.last_name = WebElement(driver, '#lastName')
-        #self.e_mail = WebElement(driver, '#userEmail')
-        self.gender = WebElement(driver, '#gender-radio-2')
-        self.mobile = WebElement(driver, '#userNumber')
+        self.user_email = WebElement(driver, '#userEmail')
+        self.gender_radio_2 = WebElement(driver, '#gender-radio-2')
+        self.user_number = WebElement(driver, '#userNumber')
+        self.btn_submit = WebElement(driver, '#submit')
+        self.modal_dialog = WebElement(driver, 'body > div.fade.modal.show > div')
+        self.btn_close_modal = WebElement(driver, '#closeLargeModal')
+
 
 
 
