@@ -14,7 +14,10 @@ def test_login_form(browser):
     demo_page.last_name.send_keys('Nagores')
     demo_page.user_email.send_keys('nagores@yandex.ru')
     demo_page.gender_radio_2.click_force()
-    demo_page.user_number.send_keys('+79119695204')
+    demo_page.user_number.send_keys('7911969520')
     time.sleep(2)
     demo_page.btn_submit.click_force()
     time.sleep(2)
+
+    assert demo_page.modal_dialog.exist()
+    demo_page.btn_close_modal.click_force()

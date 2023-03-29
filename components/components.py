@@ -1,6 +1,7 @@
 from selenium.webdriver.common.by import By
 import time
 from selenium.common.exceptions import NoSuchElementException
+from selenium.webdriver.common.keys import Keys
 
 
 class WebElement:
@@ -49,6 +50,10 @@ class WebElement:
 
     def send_keys(self, text: str):
         self.find_element().send_keys(text)
+
+    def clear(self):
+        self.find_element().send_keys(Keys.CONTROL + 'a')  # можно сделать так: self.send_keys(Keys.CONTROL + 'a')
+        self.find_element().send_keys(Keys.DELETE)
 
 
 
