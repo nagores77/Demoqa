@@ -10,3 +10,6 @@ class TextBox(BasePage):
         super().__init__(driver, self.base_url)
         self.pageData = {'title': 'DEMOQA'}
         self.first_line = WebElement(driver, '#userName')
+        self.address_line = WebElement(driver, '#currentAddress')
+        self.btn_submit = WebElement(driver, '#submit')
+        self.bottom_text = WebElement(driver, '#output > div')
