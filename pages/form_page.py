@@ -20,9 +20,10 @@ class FormPage(BasePage):
         self.modal_dialog = WebElement(driver, 'body > div.fade.modal.show > div')
         self.btn_close_modal = WebElement(driver, '#closeLargeModal')
         self.form_validation = WebElement(driver, '#userForm')
-        self.option_list = WebElement(driver, '#state > div')
+        self.state_list = WebElement(driver, '#reasct select  ') ###
 
-    def find_element_by_id(self, text):
+
+    def find_element_by_id(self):
         return self.driver.find_elements()
 
 

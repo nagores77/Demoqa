@@ -1,7 +1,9 @@
 from pages.text_box import TextBox
+import allure
 
 
-def test_placeholder(browser):
+@allure.feature('check attr')
+def test_placeholder(browser):    #проверка значения атрибута элемента
 
     demo_page = TextBox(browser)
     demo_page.visit()
