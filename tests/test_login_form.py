@@ -1,5 +1,6 @@
 from pages.form_page import FormPage
 import time
+from selenium.webdriver.support.ui import Select
 
 
 def test_login_form(browser):
@@ -21,3 +22,16 @@ def test_login_form(browser):
 
     assert demo_page.modal_dialog.exist()
     demo_page.btn_close_modal.click_force()
+
+    demo_page.option_list.arrow_down()
+    demo_page.option_list.send_keys('Haryana')
+    demo_page.option_list.arrow_down()
+
+
+
+    #a = demo_page.find_element_by_id('Haryana')
+    #Select(a)
+
+    time.sleep(5)
+    browser.close()
+

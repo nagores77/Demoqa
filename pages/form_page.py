@@ -2,6 +2,7 @@
 from pages.base_page import BasePage
 from selenium.common.exceptions import NoSuchElementException
 from components.components import WebElement
+from selenium.webdriver.common.by import By
 
 
 class FormPage(BasePage):
@@ -19,9 +20,10 @@ class FormPage(BasePage):
         self.modal_dialog = WebElement(driver, 'body > div.fade.modal.show > div')
         self.btn_close_modal = WebElement(driver, '#closeLargeModal')
         self.form_validation = WebElement(driver, '#userForm')
+        self.option_list = WebElement(driver, '#state > div')
 
-
-
+    def find_element_by_id(self, text):
+        return self.driver.find_elements()
 
 
     #def test_icon_exist(self):

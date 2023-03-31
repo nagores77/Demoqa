@@ -64,6 +64,12 @@ class WebElement:
             return value
         return True
 
+    def arrow_down(self):
+        self.find_element().send_keys(Keys.ARROW_DOWN)
+        self.find_element().send_keys(Keys.ENTER)
+
+
+
 
 
 
