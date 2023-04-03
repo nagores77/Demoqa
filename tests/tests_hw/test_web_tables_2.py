@@ -58,8 +58,10 @@ def test_web_tables(browser):
     demo_page.btn_next.click_force()
     time.sleep(3)
     demo_page.btn_previous.click_force()
-    time.sleep(5)
-   #assert demo_page.page_number.get_text() == '1'
+    time.sleep(10)
+    #assert demo_page.page_number.get_text() == '1' - не прошел
+
+
 
 
 

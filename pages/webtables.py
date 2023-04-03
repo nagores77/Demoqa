@@ -28,4 +28,7 @@ class WebTables(BasePage):
         self.btn_next = WebElement(driver, '.-next > button:nth-child(1)')
         self.btn_previous = WebElement(driver, '.-previous > button:nth-child(1)')
         self.page_of = WebElement(driver, 'span.-pageInfo >span')
-        #self.page_number = WebElement(driver, ' span.-pageInfo > div > input[type=number]')
+        #self.page_number = WebElement(driver, 'span.-pageInfo > div > input[type=number]')
+
+
+0
