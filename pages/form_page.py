@@ -20,11 +20,17 @@ class FormPage(BasePage):
         self.modal_dialog = WebElement(driver, 'body > div.fade.modal.show > div')
         self.btn_close_modal = WebElement(driver, '#closeLargeModal')
         self.form_validation = WebElement(driver, '#userForm')
-        self.state_list = WebElement(driver, '#reasct select  ') ###
+
+        self.btn_state_menu = WebElement(driver, '#state > div:nth-child(1) > div:nth-child(2) > div:nth-child(2)')
+        self.state_list = WebElement(driver, '#react-select-3-input')
+
+        self.btn_city_menu = WebElement(driver, '#city > div > div.css-1wy0on6 > div')
+        self.city_list = WebElement(driver, '#react-select-4-input')
 
 
-    def find_element_by_id(self):
-        return self.driver.find_elements()
+
+
+
 
 
     #def test_icon_exist(self):
