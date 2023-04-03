@@ -30,5 +30,9 @@ class WebTables(BasePage):
         self.page_of = WebElement(driver, 'span.-pageInfo >span')
         #self.page_number = WebElement(driver, 'span.-pageInfo > div > input[type=number]')
 
+        self.delete_rows = WebElement(driver, '[title="Delete"]')
+        self.no_rows_found = WebElement(driver, 'div.rt-noData')
+
+
 
 0
