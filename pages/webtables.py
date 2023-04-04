@@ -33,6 +33,12 @@ class WebTables(BasePage):
         self.delete_rows = WebElement(driver, '[title="Delete"]')
         self.no_rows_found = WebElement(driver, 'div.rt-noData')
 
+        self.webtable_header = WebElement(driver, 'div.rt-resizable-header-content')
+        self.webtable_content = WebElement(driver, 'div.ReactTable.-striped.-highlight > div.rt-table > div.rt-tbody')
+
+
+
+
 
 
 0
