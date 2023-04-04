@@ -9,6 +9,7 @@ import allure
 def test_check_modal(browser):
 
     demo_page = ModalDialogs(browser)
+
     demo_page.visit()
 
     assert demo_page.small_modal.exist()
