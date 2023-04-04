@@ -14,6 +14,9 @@ def test_check_modal(browser):
     assert demo_page.home_link.get_text() == 'Home'
     assert demo_page.home_link.get_dom_attribute('href') == 'https://demoqa.com'
     demo_page.home_link.click()
+    time.sleep(3)
+    assert len(browser.window_handles) == 2
+
 
 
 
