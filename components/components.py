@@ -2,6 +2,7 @@ from selenium.webdriver.common.by import By
 import time
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.keys import Keys
+import logging
 
 
 class WebElement:
@@ -89,7 +90,13 @@ class WebElement:
     def scroll_to_element(self):
         self.driver.execute_script('window.scrollTo(0, document.body.scrollHeight);', self.find_element())
 
-
+    def check_css(self, style, value=''):   #посылаем стиль и значание конкретного эл-та
+        try:
+            self.driver.execute_script(f"arguments[0].style.{style} = '{value}';", self.find_element())
+        except Exception as ex:
+            logging.log(1, ex)
+            return False
+        return True
 
 
 

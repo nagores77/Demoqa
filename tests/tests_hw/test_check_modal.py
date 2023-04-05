@@ -12,6 +12,8 @@ def test_check_modal(browser):
 
     demo_page.visit()
 
+    assert demo_page.get_url() == 'https://demoqa.com/modal-dialogs'
+
     assert demo_page.small_modal.exist()
     assert demo_page.large_modal.exist()
 

@@ -2,12 +2,15 @@
 from selenium.webdriver.common.by import By
 import time
 import logging
+from components.components import WebElement
 
 
 class BasePage:
 
     def __init__(self, driver, base_url):
         self.driver = driver
+        self.meta_teg = WebElement(driver, 'head > meta')
+
 
 
     def visit(self):

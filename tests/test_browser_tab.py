@@ -12,6 +12,7 @@ def test_browser_tab(browser):
     assert demo_page.get_url() == 'https://demoqa.com/browser-windows'
 
     demo_page.new_tab.click()
+    #browser.switch_to.window(browser.window_handles[2])
     time.sleep(2)
     assert len(browser.window_handles) == 2
 
@@ -19,5 +20,7 @@ def test_browser_tab(browser):
     browser.switch_to.window(browser.window_handles[0])
     time.sleep(2)
     assert demo_page.get_url() == 'https://demoqa.com/browser-windows'
+
+
 
 
