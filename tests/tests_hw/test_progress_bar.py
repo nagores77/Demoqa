@@ -20,6 +20,8 @@ def test_check_progress_bar(browser):
 
     assert demo_page.progress_bar.check_css('width', '51%')
 
+    time.sleep(2)
+
     #assert demo_page.progress_bar.check_css('width', '25%')
 
 
